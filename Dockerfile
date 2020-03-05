@@ -18,7 +18,7 @@ RUN apk add --virtual --update --no-cache $PHPIZE_DEPS \
 
 RUN update-ca-certificates
 
-RUN docker-php-ext-install opcache pdo_mysql intl json gd zip bcmath pcntl
+RUN docker-php-ext-install opcache mysqli pdo_mysql intl json gd zip bcmath pcntl
 RUN docker-php-ext-enable opcache
 
 # Set timezone and cleanup apk cache
